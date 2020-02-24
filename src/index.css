@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.eventList { 
+  margin: 100px;
+
+border : 3px lightcoral solid ;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
+flex-wrap: wrap;
+grid-gap: 20px; 
+
+}
+.event { 
+  margin: 0px;
+  padding: 20px;
+  border: teal 3px solid;
+  display: grid;
+  grid-template-rows: max-content 100px 1fr;
+  text-align: center;
+  background-color: grey;
+  color: white ; 
+  background-image: url(https://mhwtactics.files.wordpress.com/2018/10/cropped-mhw-research_expedition_emblem1.png);
+  
+
+}
+
+button{ 
+  display: inline;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .eventList {
+  
+    margin: auto;
+  }
+}
