@@ -2,21 +2,12 @@ import React from 'react';
 
 
 
-export default class Event extends React.Component { 
-constructor (props) {
-    super (props); 
-    
 
-   
-}
+export default class Event extends React.Component { 
 
 questStart(qStart){
     var qStart = new Date(this.props.start);
    }
-
-    AddEvent = (e) => { 
-        console.log('Event add')
-    }
 
   
     
@@ -35,15 +26,23 @@ questStart(qStart){
 
 return   ( 
 <div className =' event '> 
-
+<img src= {" https://mhwtactics.files.wordpress.com/2018/10/cropped-mhw-research_expedition_emblem1.png "}></img>
 <h1>{this.props.eventName} </h1> 
 <h3> {this.props.questRank} </h3>
+<p>Target : {this.props.target}</p>
+
+
+
+{ /* }
 <p>{this.props.des}</p>
+<img src {'https://mhwtactics.files.wordpress.com/2018/10/cropped-mhw-research_expedition_emblem1.png'};
+
 <p> Start {questStart}</p>
 <p> End {questEnd}</p>
-<p>Target : {this.props.target}</p>
+
 <p>Location : {this.props.location} </p> 
-<button onClick={this.AddEvent}> Add </button>
+
+{*/}
 </div>
 )
 

@@ -1,15 +1,17 @@
 import React from 'react';
 import Event from './Event.js'
-import UserEvents from './UserEvents' 
-
-export default class EventList extends React.Component { 
+import Add from './Add' ; 
 
 
 
-  render ()  { 
+export default class EventList extends React.Component {
 
-    const allevents = this.props.event.map(function (event){
-        return < Event eventName={event.name} 
+  render ()  
+  { 
+
+    const allevents = this.props.event.map((event)=>{
+        return <div> < Event 
+        eventName={event.name} 
         key={event.id}
         questRank={event.requirements} 
         des={event.description}
@@ -17,22 +19,21 @@ export default class EventList extends React.Component {
         location={event.location.name}
         start={event.startTimestamp}
         end={event.endTimestamp}
-
-        />;
+        theEvent={()=>this.props.theEvent(event)} />
+        
+            <Add theEvent={()=>this.props.theEvent(event) }/>
+        </div>
       });
 
-return (  <div className='eventList'>
+    
+return (  <div>
+        <div className='div1'> 
+        { allevents }
+    
+</div>
 
-  <UserEvents /> 
-
-{ allevents }
 
 </div>
 )
-
-
-
-
-
-  }
 }
+  }
