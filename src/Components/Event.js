@@ -33,6 +33,7 @@ return   (
 
 
 
+
 { /* }
 <p>{this.props.des}</p>
 <img src {'https://mhwtactics.files.wordpress.com/2018/10/cropped-mhw-research_expedition_emblem1.png'};

@@ -1,8 +1,6 @@
 import React from 'react';
-import Event from './Event.js'
-import Add from './Add' ; 
-
-
+import Event from './Event'
+import Add from './Add' ;
 
 export default class EventList extends React.Component {
 
@@ -21,7 +19,7 @@ export default class EventList extends React.Component {
         end={event.endTimestamp}
         theEvent={()=>this.props.theEvent(event)} />
         
-            <Add theEvent={()=>this.props.theEvent(event) }/>
+        <Add theEvent={()=>this.props.theEvent(event) }/>
         </div>
       });
 

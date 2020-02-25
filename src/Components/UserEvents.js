@@ -1,6 +1,7 @@
 import React from 'react';
-import Event from './Event.js'
-
+import Event from './Event'
+import Edit from './Edit'
+import Remove from './Remove'
  // New 
 
 export default class UserEvents extends React.Component { 
@@ -10,7 +11,7 @@ export default class UserEvents extends React.Component {
 
 
     const allevents = this.props.userEvents.map((event)=>{
-      return < Event 
+      return <div> < Event 
       eventName={event.name} 
       key={event.id}
       questRank={event.requirements} 
@@ -19,8 +20,13 @@ export default class UserEvents extends React.Component {
       location={event.location.name}
       start={event.startTimestamp}
       end={event.endTimestamp}
+      removeEvent={()=>this.props.removeEvent(event) } />
+      // Notes Here 
+      <Edit editEvent={()=>this.props.editEvent(event) }/>
+      <Remove removeEvent={()=>this.props.removeEvent(event) }
+      removeAllEvents={()=>this.props.removeAllEvents(event)}/>
 
-      />;
+      </div> 
     });
 
   //setting time propryty from the timestamp .. 
