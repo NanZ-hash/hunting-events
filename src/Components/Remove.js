@@ -10,21 +10,12 @@ export default class Remove extends React.Component {
 
 }
 
-RemoveAllEvent = (e) => { 
-  console.log('All Event removed ')
-  console.log('handling THE REMOVE click!')
-  this.props.removeAllEvents()
-
-}
-
-
-
   render ()  { 
 
 return (  
   <div>
 <button onClick={this.RemoveEvent}> Remove </button>
-<button onClick={this.RemoveAllEvent}> Remove All </button>
+
 </div>
 )
   }

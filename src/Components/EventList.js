@@ -16,8 +16,7 @@ export default class EventList extends React.Component {
         target={event.successConditions}
         location={event.location.name}
         start={event.startTimestamp}
-        end={event.endTimestamp}
-        theEvent={()=>this.props.theEvent(event)} />
+        end={event.endTimestamp} />
         
         <Add theEvent={()=>this.props.theEvent(event) }/>
         </div>
@@ -25,10 +24,10 @@ export default class EventList extends React.Component {
 
     
 return (  <div>
-        <div className='div1'> 
+       
         { allevents }
     
-</div>
+
 
 
 </div>

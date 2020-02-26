@@ -3,6 +3,7 @@ import React from 'react';
 
 
 
+
 export default class Event extends React.Component { 
 
 questStart(qStart){
@@ -26,15 +27,18 @@ questStart(qStart){
 
 return   ( 
 <div className =' event '> 
-<img src= {" https://mhwtactics.files.wordpress.com/2018/10/cropped-mhw-research_expedition_emblem1.png "}></img>
-<h1>{this.props.eventName} </h1> 
-<h3> {this.props.questRank} </h3>
-<p>Target : {this.props.target}</p>
+
+<h4>{this.props.eventName} </h4> 
+<h6> {this.props.questRank} </h6>
+
+
 
 
 
 
 { /* }
+
+<p>Target : {this.props.target}</p>
 <p>{this.props.des}</p>
 <img src {'https://mhwtactics.files.wordpress.com/2018/10/cropped-mhw-research_expedition_emblem1.png'};
 

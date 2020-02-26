@@ -2,6 +2,8 @@ import React from 'react';
 import Event from './Event'
 import Edit from './Edit'
 import Remove from './Remove'
+import RemoveAll from './RemoveAll'
+import QuestClear from './QuestClear';
  // New 
 
 export default class UserEvents extends React.Component { 
@@ -11,7 +13,8 @@ export default class UserEvents extends React.Component {
 
 
     const allevents = this.props.userEvents.map((event)=>{
-      return <div> < Event 
+      return <div> 
+        < Event 
       eventName={event.name} 
       key={event.id}
       questRank={event.requirements} 
@@ -20,14 +23,22 @@ export default class UserEvents extends React.Component {
       location={event.location.name}
       start={event.startTimestamp}
       end={event.endTimestamp}
-      removeEvent={()=>this.props.removeEvent(event) } />
+       />
       // Notes Here 
       <Edit editEvent={()=>this.props.editEvent(event) }/>
-      <Remove removeEvent={()=>this.props.removeEvent(event) }
-      removeAllEvents={()=>this.props.removeAllEvents(event)}/>
+      <Remove removeEvent={()=>this.props.removeEvent(event) } />
+      <QuestClear QuestClear={()=>this.props.QuestClear(event)} />
+     
+       
+    
 
       </div> 
     });
+
+
+
+
+
 
   //setting time propryty from the timestamp .. 
 // Quset tim start..
@@ -41,11 +52,15 @@ export default class UserEvents extends React.Component {
 
   return   ( 
 
-    <div className =' div2 '> 
+    <div > 
+     < RemoveAll removeAllEvents={()=>this.props.removeAllEvents(this.props.event)} 
+       removeQuestClear={()=> this.props.removeQuestClear(this.props.event)}/>
     {allevents}
   
     </div>
     )
     
       }
-    }
+  }
+
+    
