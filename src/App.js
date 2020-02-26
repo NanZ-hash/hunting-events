@@ -117,6 +117,24 @@ handleRemoveAllEvent = (event) => {
 
 
 
+    
+  handleDetailsClick = (event) => {
+    
+  const url2 = `https://mhw-db.com/events/${event.id}`
+ 
+  axios({
+      method: 'get',
+      url: url2
+  })
+      .then(res => {
+           this.setState({current: res.data});
+      })
+      .catch(err => {
+          console.log('ERROR: ', err);
+      });
+};
+
+
   render ()  { 
 
 return <div>
@@ -124,19 +142,21 @@ return <div>
   <div className='div1'>
   <h1> Event List </h1>
   <EventList  
+  handleDetailsClick={this.handleDetailsClick}
   theEvent={this.handleAddEvent}
   event={this.state.events} 
   userEvents={this.state.UserEvents}
   />
 </div>
 
-<div className='div3' > <EventDetails /> </div>
+<div className='div3' > <EventDetails details= { this.state.current } /> </div>
 
 
 
 <div className =' div2 '> 
 <h1> User List </h1>
   < UserEvents 
+  handleDetailsClick={this.handleDetailsClick}
   event={this.state.events} 
   userEvents={this.state.UserEvents}
   removeEvent= {this.handleRemoveEvent} 

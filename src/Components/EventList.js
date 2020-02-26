@@ -16,7 +16,9 @@ export default class EventList extends React.Component {
         target={event.successConditions}
         location={event.location.name}
         start={event.startTimestamp}
-        end={event.endTimestamp} />
+        end={event.endTimestamp}
+        handleDetailsClick={()=>this.props.handleDetailsClick(event)}
+        />
         
         <Add theEvent={()=>this.props.theEvent(event) }/>
         </div>

@@ -23,15 +23,13 @@ export default class UserEvents extends React.Component {
       location={event.location.name}
       start={event.startTimestamp}
       end={event.endTimestamp}
+      handleDetailsClick={()=>this.props.handleDetailsClick(event)}
+   
        />
       // Notes Here 
       <Edit editEvent={()=>this.props.editEvent(event) }/>
       <Remove removeEvent={()=>this.props.removeEvent(event) } />
       <QuestClear QuestClear={()=>this.props.QuestClear(event)} />
-     
-       
-    
-
       </div> 
     });
 
