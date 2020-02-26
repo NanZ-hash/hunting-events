@@ -4,6 +4,7 @@ import MHW from './TestdB.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import UserEvents from './Components/UserEvents' 
 import EventDetails from './Components/EventDetails'
+import axios from 'axios'
 
 
 
@@ -13,16 +14,29 @@ export default class App extends React.Component {
 
     // seeting the inital valuse .. 
     this.state ={
-      events : MHW.events, 
+      events : [], 
       UserEvents:[], 
       current :{ },
       QuestClear:[], 
 
 
   }
- 
+ const url = 'https://mhw-db.com/events'; 
+  axios({
+    method: 'get',
+    url: url
+})
+    .then(res => {
+      this.setState({events: res.data});
+    })
+    .catch(err => {
+        console.log('ERROR: ', err);
+    });
+}; 
 
-}
+
+
+
 
 
   // for adding the events
@@ -131,8 +145,6 @@ return <div>
   removeQuestClear ={ this.handleRemoveQuestClear}
   
   />
-
-
   </div>
 
 </div>
