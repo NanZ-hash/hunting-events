@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/hunting-events/static/css/main.be98c3af.chunk.css",
+    "main.js": "/hunting-events/static/js/main.117c0a11.chunk.js",
+    "main.js.map": "/hunting-events/static/js/main.117c0a11.chunk.js.map",
+    "runtime-main.js": "/hunting-events/static/js/runtime-main.0c3d4a2d.js",
+    "runtime-main.js.map": "/hunting-events/static/js/runtime-main.0c3d4a2d.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/hunting-events/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.ca884a7a.chunk.js": "/hunting-events/static/js/2.ca884a7a.chunk.js",
+    "static/js/2.ca884a7a.chunk.js.map": "/hunting-events/static/js/2.ca884a7a.chunk.js.map",
+    "index.html": "/hunting-events/index.html",
+    "precache-manifest.c442eea13aee9ac20397ebe0c3f989be.js": "/hunting-events/precache-manifest.c442eea13aee9ac20397ebe0c3f989be.js",
+    "service-worker.js": "/hunting-events/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/hunting-events/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.be98c3af.chunk.css.map": "/hunting-events/static/css/main.be98c3af.chunk.css.map",
+    "static/js/2.ca884a7a.chunk.js.LICENSE.txt": "/hunting-events/static/js/2.ca884a7a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0c3d4a2d.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.ca884a7a.chunk.js",
+    "static/css/main.be98c3af.chunk.css",
+    "static/js/main.117c0a11.chunk.js"
+  ]
+}
