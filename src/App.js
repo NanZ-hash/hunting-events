@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import UserEvents from './Components/UserEvents' 
 import EventDetails from './Components/EventDetails'
 import axios from 'axios'
-
+import Edit from './Components/Edit'
 
 
 export default class App extends React.Component { 
@@ -17,7 +17,8 @@ export default class App extends React.Component {
       events : [], 
       UserEvents:[], 
       current :{ },
-      QuestClear:[], 
+      QuestClear:[],
+   
 
 
   }
@@ -135,6 +136,12 @@ handleRemoveAllEvent = (event) => {
 };
 
 
+
+//// FOR THE EDIT PART >>  
+
+
+
+
   render ()  { 
 
 return <div>
@@ -151,11 +158,9 @@ return <div>
 
 <div className='div3' > <EventDetails details= { this.state.current } /> </div>
 
-
-
 <div className =' div2 '> 
 <h1> User List </h1>
-  < UserEvents 
+  < UserEvents
   handleDetailsClick={this.handleDetailsClick}
   event={this.state.events} 
   userEvents={this.state.UserEvents}
@@ -165,7 +170,10 @@ return <div>
   removeQuestClear ={ this.handleRemoveQuestClear}
   
   />
+
+
   </div>
+
 
 </div>
 

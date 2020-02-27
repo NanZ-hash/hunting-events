@@ -4,6 +4,7 @@ import Edit from './Edit'
 import Remove from './Remove'
 import RemoveAll from './RemoveAll'
 import QuestClear from './QuestClear';
+import AddNote from './EditUpdate';
  // New 
 
 export default class UserEvents extends React.Component { 
@@ -23,13 +24,11 @@ export default class UserEvents extends React.Component {
       location={event.location.name}
       start={event.startTimestamp}
       end={event.endTimestamp}
-      handleDetailsClick={()=>this.props.handleDetailsClick(event)}
-   
-       />
-      // Notes Here 
-      <Edit editEvent={()=>this.props.editEvent(event) }/>
+      handleDetailsClick={()=>this.props.handleDetailsClick(event)} />
+  
       <Remove removeEvent={()=>this.props.removeEvent(event) } />
       <QuestClear QuestClear={()=>this.props.QuestClear(event)} />
+    
       </div> 
     });
 
@@ -53,7 +52,10 @@ export default class UserEvents extends React.Component {
     <div > 
      < RemoveAll removeAllEvents={()=>this.props.removeAllEvents(this.props.event)} 
        removeQuestClear={()=> this.props.removeQuestClear(this.props.event)}/>
+
     {allevents}
+
+    
   
     </div>
     )
