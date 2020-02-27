@@ -18,8 +18,6 @@ export default class EventList extends React.Component {
         start={event.startTimestamp}
         end={event.endTimestamp}
         handleDetailsClick={()=>this.props.handleDetailsClick(event)}
-        editEvent={()=>this.props.editEvent(event)}
-      onTextBoxChange={()=>this.props.onTextBoxChange(event)}
         />
         
         <Add theEvent={()=>this.props.theEvent(event) }/>
@@ -28,12 +26,7 @@ export default class EventList extends React.Component {
 
     
 return (  <div>
-       
         { allevents }
-    
-
-
-
 </div>
 )
 }

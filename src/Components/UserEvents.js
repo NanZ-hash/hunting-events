@@ -1,10 +1,10 @@
 import React from 'react';
 import Event from './Event'
-import Edit from './Edit'
+
 import Remove from './Remove'
 import RemoveAll from './RemoveAll'
 import QuestClear from './QuestClear';
-import AddNote from './EditUpdate';
+
  // New 
 
 export default class UserEvents extends React.Component { 

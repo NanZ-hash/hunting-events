@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import UserEvents from './Components/UserEvents' 
 import EventDetails from './Components/EventDetails'
 import axios from 'axios'
-import Edit from './Components/Edit'
+
 
 
 export default class App extends React.Component { 
@@ -22,6 +22,7 @@ export default class App extends React.Component {
 
 
   }
+  // caaling The APi for the firt time ,, to get the list of eveents, 
  const url = 'https://mhw-db.com/events'; 
   axios({
     method: 'get',
@@ -67,30 +68,19 @@ handleQuestClear = (event) => {
 
 // if the box is checked remove it... 
 handleRemoveQuestClear = (event) => { 
-  //let QuestClear = [...this.state.QuestClear] ;
- // let UserEvents = [...this.state.UserEvents]
+
   const vlaue = event.name; 
- // const serch=this.state.QuestClear.slice(1,enentIndex)
+ 
   console.log(`value ` + vlaue)
- // = e.target.value
    const notList = this.state.UserEvents.filter(function(event) {  // making a new array 
     return !event.name.includes(vlaue)//!list.includes(serch)
    })
-  
 
     console.log (`Clear all Quests`+notList)
   this.setState({ UserEvents : notList}) // call for the change to happen . . .
 
 
   }
-  // const UserEvents = [...this.state.UserEvents]
-  // if item compleate remove it ... 
-
-
-
-
-
-
 
 
 // for removing the events ... .
@@ -105,6 +95,7 @@ handleRemoveEvent = (event) => {
 }
 
 
+// for clearing all the list 
 
 handleRemoveAllEvent = (event) => {
   let UserEvents = [...this.state.UserEvents]
@@ -118,7 +109,7 @@ handleRemoveAllEvent = (event) => {
 
 
 
-    
+    // API call for the ditails of the events.. 
   handleDetailsClick = (event) => {
     
   const url2 = `https://mhw-db.com/events/${event.id}`
@@ -135,13 +126,6 @@ handleRemoveAllEvent = (event) => {
       });
 };
 
-
-
-//// FOR THE EDIT PART >>  
-
-
-
-
   render ()  { 
 
 return <div>
@@ -156,7 +140,7 @@ return <div>
   />
 </div>
 
-<div className='div3' > <EventDetails details= { this.state.current } /> </div>
+
 
 <div className =' div2 '> 
 <h1> User List </h1>
@@ -174,6 +158,7 @@ return <div>
 
   </div>
 
+  <div className='div3' > <EventDetails details= { this.state.current } /> </div>
 
 </div>
 

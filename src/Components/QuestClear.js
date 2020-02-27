@@ -11,18 +11,21 @@ constructor(props) {
   
   clear = (e) => { 
     console.log(' Quest Clear ...  ')
-    this.props.QuestClear()
+    //this.props.QuestClear() 
+    this.setState ({ isComplete : true })
   
 }
 
 
 
   render ()  { 
+  
+    
 
 return (  
-  <div>
-<button onClick={this.clear}> COMPLETE </button>
-</div>
+  <button   onClick={this.clear}>
+  Done
+    </button>
 )
   }
 }

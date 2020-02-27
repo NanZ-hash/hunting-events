@@ -11,8 +11,9 @@ export default class Event extends React.Component {
     };
   }
   
+   // Live editing for the text ..
+
     editEvent = (e) => { 
-      console.log('here' , this.state.editThis )
   e.preventDefault();
 
   this.setState({ 
@@ -23,7 +24,6 @@ export default class Event extends React.Component {
 
 onTextBoxChange = (e) => { 
   e.stopPropagation()
-  console.log( "somthing " ,e.target.vlaue ,"NEW ITEM" , this.state.newItem); 
   this.setState({ 
     newItem: e.target.value ,
     editThis:this.state.newItem ,
@@ -31,8 +31,8 @@ onTextBoxChange = (e) => {
   })
 }
 
+// function for calling the details for the event .. 
   callDetail =(event)=> { 
-    console.log ("DATA")
    this.props.handleDetailsClick()
    
   }
@@ -44,7 +44,7 @@ return   (
 
 <h4  onClick={this.callDetail} >{this.state.eventName} </h4> 
 <h6> {this.props.questRank} </h6>
-<h3>{this.props.location}</h3>
+<h6>{this.props.location}</h6>
 
 
 <form> 
@@ -57,6 +57,7 @@ return   (
     </form>
 
 </div>
+
 )
 
   }
